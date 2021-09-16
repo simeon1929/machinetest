@@ -457,6 +457,7 @@ form.loginDetails input ::placeholder {
   }
   header {
     position: relative;
+    margin-bottom: 30px;
   }
   .none {
     display: block;
@@ -464,7 +465,7 @@ form.loginDetails input ::placeholder {
   .mobilemenu {
     position: absolute;
     right: 20px;
-    top: 30px;
+    top: 24px;
     cursor: pointer;
     font-size: 22px;
     display: block;
@@ -477,11 +478,15 @@ form.loginDetails input ::placeholder {
   body.active {
     right: 270px;
   }
+  body, header, nav {
+    -webkit-transition: all 0.3s  ease;
+    transition: all 0.3s  ease;
+  }
   header.active {
-    right: 270px;
+    right: 0;
   }
   nav.active {
-    right: 0;
+    right: -270px;
   }
   header nav {
     position: absolute;
