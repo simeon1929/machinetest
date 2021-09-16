@@ -47,8 +47,25 @@ a {text-decoration: none;}
 
 $white :white;
 $linkcolorBg :#617392;
+$title__font :28px;
+$titleH1color :#1B1E30;
+$titleLine :#0722D5;
 @mixin border-radius($r) {
     border-radius: $r;
+  }
+  h1 {
+    line-height: 33px;
+    font-weight: 600;
+  }
+  h1, h2 {
+    font-size:$title__font ;
+
+  }
+
+  h2 {
+
+    line-height: 40px;
+    color: #617392;
   }
 
 header {
@@ -73,5 +90,133 @@ header {
                 }
             }
         }
+    }
+}
+.from__login {
+    .loginbg{
+        background-color: #F1F5FC ;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 120px;
+        border-top-right-radius: 30px;
+    }
+    .center {place-content: center; display: grid;}
+    .width__text {
+        width: 470px;
+        padding-top: 20px;
+        
+    }
+    h2 {
+        margin-bottom: 80px;
+    }
+    h1 {
+        width: 326px;
+        position: relative;
+        padding-top: 20px;
+        &::after {
+            background-color: $titleLine;
+            content: ' ';
+            height: 5px;
+            width: 15px;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+    }
+    .paddingLeft {
+        padding-left: 30px;
+    }
+
+}
+.title {
+    h1 {
+        padding-bottom: 20px;
+    }
+    small {
+        font-size: 12px;
+        line-height: 17px;
+        color: #1B1E30;
+    }
+}
+form {
+    .formRow {
+        margin-bottom: 20px;
+    }
+    input {
+        background-color: #F5F5F5;
+        border: none;
+        padding: 5px 15px;
+        ::placeholder {
+            background-color: #F5F5F5;
+            color: #06142E;
+            font-size: 12px;
+        }
+    }
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.gridThree {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btnCustmize {
+    text-align: center;
+    font-size: 13px;
+    display: block;
+    padding: 15px;
+    width: 100%;
+}
+.borderBtn {
+    border: 1px solid #0722D524;
+}
+.gradientBtn {
+    color: $white;
+    background: transparent linear-gradient(98deg, #06C1CF 0%, #7B04D9 77%, #7C01D9 100%) 0% 0% no-repeat padding-box;
+    text-transform: uppercase;
+}
+.end__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    & div:nth-child(1) , & div:nth-child(4) {
+        padding: 10px;
+        position: relative;
+
+        h1 {
+            font-size: 62px;
+            position: absolute;
+            bottom: 0;
+            bottom: -32px;
+            margin: 0;
+            z-index: -1;
+            color: #55CBFA;
+            opacity: 0.5;
+        }
+    }
+    > div {
+        height: 177px;
+        p {
+            margin: 3px;
+        }
+
+        h3 {
+            color: #84909D;
+            span {
+                color: #55CBFA;
+            }
+        }
+        p {
+            color: #84909D;
+        }
+      
+    }
+    img {
+        width: 100%;
     }
 }
