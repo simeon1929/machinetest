@@ -26,6 +26,14 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+img {
+  max-width: 100%;
+}
+
+.deskNone, .none {
+  display: none;
+}
+
 body {
   line-height: 1;
   width: 100%;
@@ -65,6 +73,15 @@ h2 {
   color: #617392;
 }
 
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+  color: black;
+}
+
 header {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -99,18 +116,51 @@ header nav ul li a {
 header nav ul li a.Nav__btn {
   background-color: #617392;
   color: white;
-  padding: 6px;
+  padding: 4px 10px;
   border-radius: 10px;
 }
 
-.from__login .loginbg {
+.paddingLeftEqual {
+  padding-left: 100px;
+}
+
+.whiteBg {
+  background-color: white;
+  position: relative;
+}
+
+.whiteBg:after {
+  content: ' ';
+  background: #F1F5FC;
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bgShadow {
+  -webkit-box-shadow: 0px 3px 36px #0000000D;
+          box-shadow: 0px 3px 36px #0000000D;
+  padding: 15px 20px;
+  background-color: white;
+}
+
+.loginbg {
   background-color: #F1F5FC;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 30px;
-  padding-bottom: 120px;
   border-top-right-radius: 30px;
+  padding: 30px 30px 120px 15px;
+}
+
+.borderRadius {
+  border-top-right-radius: 30px;
+}
+
+.paddingLeftLogin {
+  padding-left: 20%;
 }
 
 .from__login .center {
@@ -119,8 +169,16 @@ header nav ul li a.Nav__btn {
   display: grid;
 }
 
+.from__login .left {
+  place-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+}
+
 .from__login .width__text {
-  width: 470px;
   padding-top: 20px;
 }
 
@@ -158,35 +216,40 @@ header nav ul li a.Nav__btn {
   color: #1B1E30;
 }
 
-form .formRow {
+form.loginDetails {
+  padding-top: 20px;
+}
+
+form.loginDetails .formRow {
   margin-bottom: 20px;
 }
 
-form input {
+form.loginDetails input {
   background-color: #F5F5F5;
   border: none;
   padding: 5px 15px;
+  min-height: 50px;
 }
 
-form input ::-webkit-input-placeholder {
+form.loginDetails input ::-webkit-input-placeholder {
   background-color: #F5F5F5;
   color: #06142E;
   font-size: 12px;
 }
 
-form input :-ms-input-placeholder {
+form.loginDetails input :-ms-input-placeholder {
   background-color: #F5F5F5;
   color: #06142E;
   font-size: 12px;
 }
 
-form input ::-ms-input-placeholder {
+form.loginDetails input ::-ms-input-placeholder {
   background-color: #F5F5F5;
   color: #06142E;
   font-size: 12px;
 }
 
-form input ::placeholder {
+form.loginDetails input ::placeholder {
   background-color: #F5F5F5;
   color: #06142E;
   font-size: 12px;
@@ -195,22 +258,28 @@ form input ::placeholder {
 .grid {
   display: -ms-grid;
   display: grid;
+}
+
+.twogrid {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
 }
 
 .gridThree {
-  display: -ms-grid;
-  display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gapGrid {
+  grid-gap: 20px;
 }
 
 .btnCustmize {
   text-align: center;
   font-size: 13px;
   display: block;
-  padding: 15px;
+  padding: 5px;
+  min-height: 50px;
   width: 100%;
 }
 
@@ -224,42 +293,97 @@ form input ::placeholder {
   text-transform: uppercase;
 }
 
+.detailed__warper {
+  margin-bottom: 50px;
+  color: #4F6D8F;
+  font-size: 20px;
+}
+
+.detailed__warper .row {
+  margin-top: -20px;
+}
+
+.detailed__warper .rowdiv {
+  padding: 20px;
+  margin-top: -20px;
+  position: relative;
+}
+
+.detailed__warper .rowdiv h4 {
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.detailed__warper .rowdiv h5 {
+  line-height: 20px;
+}
+
+.detailed__warper .rowdiv h5 span {
+  display: block;
+  font-size: 14px;
+  color: #828282;
+}
+
+.rate {
+  display: -ms-grid;
+  display: grid;
+  place-content: end;
+}
+
+.rate ul li {
+  padding-left: 5px;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+}
+
 .end__card {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  max-width: 700px;
   width: 100%;
   margin: 0 auto;
 }
 
+.end__card .imageContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 40px;
+}
+
 .end__card div:nth-child(1), .end__card div:nth-child(4) {
-  padding: 10px;
   position: relative;
+  border: 1px solid #eee;
 }
 
 .end__card div:nth-child(1) h1, .end__card div:nth-child(4) h1 {
   font-size: 62px;
   position: absolute;
-  bottom: 0;
-  bottom: -32px;
   margin: 0;
   z-index: -1;
-  color: #55CBFA;
-  opacity: 0.5;
-}
-
-.end__card > div {
-  height: 177px;
+  color: #06B2FF;
+  opacity: 0.2;
+  bottom: 5px;
 }
 
 .end__card > div p {
   margin: 3px;
+  font-size: 18px;
 }
 
 .end__card > div h3 {
   color: #84909D;
+  font-size: 27px;
+  line-height: 28px;
+  padding-bottom: 8px;
 }
 
 .end__card > div h3 span {
@@ -268,9 +392,185 @@ form input ::placeholder {
 
 .end__card > div p {
   color: #84909D;
+  font-size: 18px;
 }
 
 .end__card img {
   width: 100%;
+  height: 100%;
+}
+
+.end__card .centertext {
+  border: none !important;
+}
+
+@media (max-width: 1200px) {
+  .paddingLeftEqual {
+    padding-left: 15px;
+  }
+  .whiteBg:after {
+    padding-left: 15px;
+  }
+  .mediumDevice.twogrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .width__text {
+    padding-left: 80px;
+  }
+  .from__login h2 {
+    margin-bottom: 30px;
+  }
+  .gride__row.paddingLeft {
+    padding-top: 30px;
+  }
+  .loginbg {
+    padding-bottom: 60px;
+  }
+  .mobileChnage.twogrid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .detailed__warper {
+    padding-top: 30px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .detailed__warper .rowdiv h4 {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  h5 {
+    font-size: 14px;
+  }
+  h5 span {
+    font-size: 12px;
+  }
+  .detailed__warper .twogrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .detailed__warper .rate {
+    place-content: inherit;
+    padding-top: 10px;
+  }
+  header {
+    position: relative;
+  }
+  .none {
+    display: block;
+  }
+  .mobilemenu {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    display: block;
+  }
+  body {
+    right: 0;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body.active {
+    right: 270px;
+  }
+  header.active {
+    right: 270px;
+  }
+  nav.active {
+    right: 0;
+  }
+  header nav {
+    position: absolute;
+    right: -270px;
+    top: 0;
+    z-index: 9;
+    background: #617392;
+    height: 100vh;
+    width: 270px;
+    color: #fff;
+  }
+  header nav ul {
+    display: inherit;
+  }
+  header nav ul li {
+    padding: 15px 15px;
+    border-bottom: 1px solid;
+    display: block;
+  }
+  header nav ul li a {
+    color: #fff;
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .whiteBg:after {
+    width: 0 !important;
+  }
+  .width__text {
+    padding-left: 0;
+  }
+  .end__card div:nth-child(1) h1, .end__card div:nth-child(4) h1 {
+    position: static;
+    padding: 15px;
+  }
+  .end__card .imageContent {
+    padding-left: 15px;
+  }
+  .end__card .imageContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .paddingLeftEqual, .whiteBg:after {
+    padding-left: 0;
+  }
+  .from__login .paddingLeft {
+    padding-left: 0;
+  }
+  .mobileChnage.twogrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  form.loginDetails .formRow {
+    margin-bottom: 0;
+  }
+  form.loginDetails .formRow input {
+    width: 100%;
+  }
+  .from__login .left {
+    display: inherit;
+    padding-left: 15px;
+    padding-right: 15px;
+    place-content: inherit;
+  }
+  .deskNone {
+    display: block;
+  }
+  .mobileNone {
+    display: none;
+  }
+  .end__card {
+    display: inherit;
+  }
+  .end__card .imageContent {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .end__card > div h3 {
+    font-size: 22px;
+  }
+  .end__card > div p {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

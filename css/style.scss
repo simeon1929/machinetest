@@ -25,6 +25,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+img {
+    max-width: 100%;
+}
+.deskNone, .none {
+    display: none;
+}
 body {
 	line-height: 1;
     width: 100%;
@@ -67,6 +73,11 @@ $titleLine :#0722D5;
     line-height: 40px;
     color: #617392;
   }
+  h4 { font-size: 20px;}
+  h5 {
+      font-size: 18px;
+      color: black;
+  }
 
 header {
     align-items: center;
@@ -84,7 +95,7 @@ header {
                     &.Nav__btn {
                         background-color: $linkcolorBg;
                         color: white;
-                        padding: 6px;
+                        padding: 4px 10px;
                         @include border-radius(10px)
                     }
                 }
@@ -92,17 +103,48 @@ header {
         }
     }
 }
-.from__login {
-    .loginbg{
-        background-color: #F1F5FC ;
-        align-items: center;
-        padding-top: 30px;
-        padding-bottom: 120px;
-        border-top-right-radius: 30px;
+.paddingLeftEqual{
+    
+    padding-left: 100px;
+}
+
+
+.whiteBg {
+    background-color: $white;
+    position: relative;
+    &:after{
+        content: ' ';
+        background:#F1F5FC;
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
+}
+.bgShadow {
+    box-shadow: 0px 3px 36px #0000000D;
+    padding: 15px 20px;
+    background-color: $white;
+}
+.loginbg{
+    background-color: #F1F5FC ;
+    align-items: center;
+    border-top-right-radius: 30px;
+    padding:30px 30px 120px 15px;
+    
+}
+.borderRadius {
+    border-top-right-radius: 30px;
+}
+.paddingLeftLogin {
+    padding-left: 20%;
+}
+.from__login {
+    
     .center {place-content: center; display: grid;}
+    .left {place-content: center;  align-items: center; display: grid;}
     .width__text {
-        width: 470px;
         padding-top: 20px;
         
     }
@@ -139,7 +181,8 @@ header {
         color: #1B1E30;
     }
 }
-form {
+form.loginDetails {
+    padding-top: 20px;
     .formRow {
         margin-bottom: 20px;
     }
@@ -147,6 +190,7 @@ form {
         background-color: #F5F5F5;
         border: none;
         padding: 5px 15px;
+        min-height: 50px;
         ::placeholder {
             background-color: #F5F5F5;
             color: #06142E;
@@ -156,18 +200,24 @@ form {
 }
 .grid {
     display: grid;
+    
+}
+.twogrid {
     grid-template-columns: 1fr 1fr;
 }
 .gridThree {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+.gapGrid {
+    grid-gap: 20px;
 }
 
 .btnCustmize {
     text-align: center;
     font-size: 13px;
     display: block;
-    padding: 15px;
+    padding: 5px;
+    min-height: 50px;
     width: 100%;
 }
 .borderBtn {
@@ -178,45 +228,262 @@ form {
     background: transparent linear-gradient(98deg, #06C1CF 0%, #7B04D9 77%, #7C01D9 100%) 0% 0% no-repeat padding-box;
     text-transform: uppercase;
 }
+.detailed__warper {
+    margin-bottom: 50px;
+    color: #4F6D8F;
+    font-size: 20px;
+    .row {
+        margin-top: -20px;
+    }
+    .rowdiv {
+        padding: 20px;
+        margin-top: -20px;
+        position: relative;
+        h4 {
+            margin-bottom: 20px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        h5 {
+            line-height: 20px;
+            span {
+                display: block;
+                font-size: 14px;
+                color: #828282;
+            }
+        }
+    }
+}
+.rate {
+    display: grid;
+    place-content: end;
+    ul li {padding-left: 5px;}
+}
+.container {
+    width: 100%;
+    max-width: 960px;
+}
 .end__card {
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    max-width: 700px;
+    
     width: 100%;
     margin: 0 auto;
+    .imageContent {
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+    }
     & div:nth-child(1) , & div:nth-child(4) {
-        padding: 10px;
+        
         position: relative;
+        border:1px solid #eee;
 
         h1 {
             font-size: 62px;
             position: absolute;
-            bottom: 0;
-            bottom: -32px;
             margin: 0;
             z-index: -1;
-            color: #55CBFA;
-            opacity: 0.5;
+            color: #06B2FF;
+            opacity: 0.2;
+            bottom: 5px;
         }
     }
     > div {
-        height: 177px;
         p {
             margin: 3px;
+            font-size: 18px;
         }
 
         h3 {
             color: #84909D;
+            font-size: 27px;
+            line-height: 28px;
+            padding-bottom: 8px;
             span {
                 color: #55CBFA;
             }
         }
         p {
             color: #84909D;
+            font-size: 18px;
         }
       
     }
     img {
         width: 100%;
+        height: 100%;
+    }
+    .centertext {
+        border: none !important;
     }
 }
+
+
+@media (max-width:1200px) {
+    .paddingLeftEqual {
+        padding-left: 15px;
+    }
+    .whiteBg:after {
+        padding-left: 15px;
+    }
+     .mediumDevice.twogrid  {
+        grid-template-columns: 1fr;
+     }
+    .width__text {
+        padding-left: 80px;
+    }
+    .from__login h2 {
+        margin-bottom: 30px;
+    }
+    .gride__row.paddingLeft {
+        padding-top: 30px;
+    }
+    .loginbg {
+        padding-bottom: 60px;
+    }
+    .mobileChnage.twogrid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .detailed__warper {
+        padding-top: 30px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    .detailed__warper .rowdiv h4 {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    h5 {
+        font-size: 14px;
+        span{
+            font-size: 12px;
+        }
+    }
+    .detailed__warper {
+        .twogrid {
+            grid-template-columns: 1fr;
+        }
+        .rate {
+            place-content: inherit;
+            padding-top: 10px;
+        }
+    }
+    header {
+        position: relative;
+    }
+    .none {
+        display: block;
+    }
+    .mobilemenu {
+        position: absolute;
+        right: 20px;
+        top:30px;
+        cursor: pointer;
+        font-size: 22px;
+        display: block;
+    }
+    body {
+        right: 0;
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    body.active{
+        right: 270px
+    };
+    header.active {
+        right: 270px;
+    }
+    nav.active {
+        right: 0;
+    }
+    header nav {
+            position: absolute;
+            right: -270px;
+            top: 0;
+            z-index: 9;
+            background: #617392;
+            height: 100vh;
+            width: 270px;
+            color: #fff;
+        ul {
+            display: inherit;
+            
+            li {
+                padding: 15px 15px;
+                border-bottom: 1px solid;
+                display: block;
+                a {
+                    color: #fff;
+                    display: block;
+                }
+            }
+        }
+    }
+  }
+  @media (max-width:800px) { 
+    .whiteBg:after {
+        width: 0 !important;
+    }
+    .width__text {
+        padding-left: 0;
+    }
+    .end__card div:nth-child(1) h1, .end__card div:nth-child(4) h1 {
+        position: static;
+        padding: 15px;
+
+    }
+    .end__card .imageContent {
+        padding-left: 15px;
+
+    }
+    .end__card .imageContent {
+        flex-direction: column;
+    }
+    
+}
+
+
+@media (max-width:550px) {
+    .paddingLeftEqual, .whiteBg:after {
+        padding-left: 0;
+    }
+    .from__login .paddingLeft {
+        padding-left: 0;
+    }
+    .mobileChnage.twogrid {
+        grid-template-columns: 1fr;
+    }
+    form.loginDetails .formRow {
+        margin-bottom: 0;
+        input {
+            width: 100%;
+        }
+    }
+    .from__login .left {
+        display: inherit;
+        padding-left: 15px;
+        padding-right: 15px;
+        place-content: inherit;
+    }
+    .deskNone {
+        display: block;
+    }
+    .mobileNone {
+        display: none;
+    }
+    .end__card {
+        display: inherit;
+    }
+    .end__card .imageContent {
+        align-items: flex-start;
+    }
+    .end__card > div h3 {
+        font-size: 22px;
+    }
+    .end__card > div p {
+        font-size: 14px;
+    }
+ }

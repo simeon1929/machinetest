@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <title>Home</title>
 </head>
 <body>
     <header>
         <a href="#"><img src="img/logo.png" alt=""></a>
+        <div class="mobilemenu none" id="mobilemenu">
+            <i class="fas fa-bars"></i>
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -27,16 +31,16 @@
                                                                     
         </nav>
     </header>
-    <section class="from__login">
+    <section class="from__login whiteBg paddingLeftEqual">
         
-        <div class="grid">
-            <div class="gride__row loginbg center">
+        <div class="grid twogrid mediumDevice">
+            <div class="gride__row loginbg borderRadius">
                 <img src="img/loginBg.png">
                 <div class="width__text">
                     <h2>
-                        Intelligent Amazon Product Alerts 
+                        Intelligent Amazon Product Alerts <br>
     Buybox Hijackers, Product 
-    Suppressions, views, Changes
+    Suppressions, views, Changes<br>
                     </h2>
                     <h1>
                         Peace of Mind for Your
@@ -46,7 +50,7 @@ Amazon Business
                 </div>
                 
             </div>
-            <div class="gride__row paddingLeft center">
+            <div class="gride__row paddingLeft left">
                 <div class="title">
                     <h1>
                         Peace of Mind for Your
@@ -58,8 +62,8 @@ Amazon Business
                     </small>
                 </div>
             
-                <form action="">
-                    <div class="grid">
+                <form action="" class="loginDetails">
+                    <div class="grid twogrid mobileChnage gapGrid">
                             <div class="formRow"><input type="text" placeholder="Label Here"></div>
                             <div class="formRow"><input type="text" placeholder="Label Here"></div>
                             <div class="formRow"><input type="text" placeholder="Label Here"></div>
@@ -67,53 +71,124 @@ Amazon Business
                             <div class="formRow"><input type="text" placeholder="Label Here"></div>
                             <div class="formRow"><input type="text" placeholder="Label Here"></div>
                             <div class="formRow"><input type="text" placeholder="Label Here"></div>
-                            <div class="formRow"><input class="borderBtn gradientBtn" type="submit" placeholder="Label Here"></div>
-                            <div class="formRow"><input class="borderBtn btnCustmize" type="submit" placeholder="Label Here"></div>
-                            
-                            
+                            <div class="formRow"><input class="btnCustmize gradientBtn" type="submit" name="sign up"></div>
+                            <div class="formRow"><button class="borderBtn btnCustmize" type="button">Already a member? <a href="">sign In</a> </button></div>  
                     </div>
                     
                 </form>
             </div>
         </div>
     </section>
-    <section class="detailed__warper">
-        <div class="gridThree">
-            <div class="rowdiv">
-                <h4>AMZAlert is a simple system that solves the complex Amazon seller problem of monitoring such things</h4>
+    <section class="detailed__warper paddingLeftEqual container-fluid removePaading">
+        <div class="row">
+            <div class="rowdiv col-md-4">
+                <div class="bgShadow">
+                    <h4>AMZAlert is a simple system that solves the complex Amazon seller problem of monitoring such things</h4>
+                    <div class="grid twogrid">
+                        <h5>
+                            Anna Maria 
+                            <span>United States of America</span>
+                        </h5>
+                        <div class="rate">
+                            <ul class="d-flex">
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            <div class="rowdiv">
-                <h4>AMZAlert is a simple system that solves the complex Amazon seller problem of monitoring such things</h4>
+            <div class="rowdiv col-md-4">
+                <div class="bgShadow">
+                    <h4>AMZAlert is a simple system that solves the complex Amazon seller problem of monitoring such things</h4>
+                    <div class="grid twogrid">
+                        <h5>
+                            Anna Maria 
+                            <span>United States of America</span>
+                        </h5>
+                        <div class="rate">
+                            <ul class="d-flex">
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            <div class="rowdiv">
-                <h4>AMZAlert is a simple system that solves the complex Amazon seller problem of monitoring such things</h4>
+
+            <div class="rowdiv col-md-4">
+                <div class="bgShadow">
+                    <h4>AMZAlert is a simple system that solves the complex Amazon seller problem of monitoring such things</h4>
+                    <div class="grid twogrid">
+                        <h5>
+                            Anna Maria 
+                            <span>United States of America</span>
+                        </h5>
+                        <div class="rate">
+                            <ul class="d-flex">
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                                <li><img src="img/star.png"></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                
             </div>
+
         </div>
     </section>
         
-    <section class="end__card">
-        <div>
-            <h3>Browse Our <br> <span> Inventory Online </span></h3>
-            <p>You aren't following any teams yet test</p>
-            <p>Go some to aren't you aren't following</p>
+    <section class="container">
+        <div class="end__card">
+            <div class="imageContent">
+                <div class="centertext" >
+                    <h3>Browse Our <br> <span> Inventory Online </span></h3>
+                    <p>You aren’t following any teams yet text<br> Go some to aren’t You aren’t following</p>
 
-            <h1>
-                01
-            </h1>
-        </div>
-        <div>
-            <img src="img/img1.jpg" alt="">
-        </div>
-        <div>
-            <img src="img/img2.jpg" alt="">
-        </div>
-        <div>
-            <h3>Browse Our <br> <span>Inventory Online</span></h3>
-            <p>You aren't following any teams yet test</p>
-            <p>Go some to aren't you aren't following</p>
-            <h1>01</h1>
+                    
+                </div>
+                <h1>
+                    01
+                </h1>
+            </div>
+            <div>
+                <img src="img/img1.jpg" alt="">
+            </div>
+            <div class="mobileNone">
+                <img src="img/img1.jpg" alt="">
+            </div>
+            <div class="imageContent">
+                <div class="centertext" >
+                    <h3>Browse Our <br> <span> Inventory Online </span></h3>
+                    <p>You aren’t following any teams yet text<br> Go some to aren’t You aren’t following</p>
+
+                    
+                </div>
+                <h1>
+                    01
+                </h1>
+            </div>
+            <div class="deskNone"> 
+                <img src="img/img1.jpg" alt="">
+            </div>
+            
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
